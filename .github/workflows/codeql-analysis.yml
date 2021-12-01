@@ -65,6 +65,12 @@ jobs:
     #- run: |
     #   make bootstrap
     #   make release
+    - run: |
+      echo "java version"
+      java -version
+      uses: actions/setup-java@v1
+      with:
+        java-version: 15
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
